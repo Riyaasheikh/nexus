@@ -9,7 +9,7 @@ import { X } from 'lucide-react';
 const TOKEN_KEY = 'business_nexus_token';
 
 const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY);
-const API_BASE = 'http://127.0.0.1:8000';
+const API_BASE = import.meta.env.VITE_API_BASE_URL ||'http://127.0.0.1:8000';
 
 // ✅ Helper used in every axios call inside this file
 const authHeaders = () => ({

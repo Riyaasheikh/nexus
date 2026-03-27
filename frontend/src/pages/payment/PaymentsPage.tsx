@@ -24,7 +24,7 @@ export const PaymentsPage: React.FC = () => {
   const storedUser = localStorage.getItem(USER_STORAGE_KEY);
   const userRole = storedUser ? JSON.parse(storedUser).role : null;
 
-  const API_BASE = 'http://127.0.0.1:8000';
+  const API_BASE =import.meta.env.VITE_API_BASE_URL|| 'http://127.0.0.1:8000';
 
   // ✅ Single helper so every request uses the right token key
   const authHeaders = () => ({
