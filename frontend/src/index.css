@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Your Nexus Indigo Theme Colors */
+@layer base {
+  :root {
+    --color-primary-600: #4f46e5;
+  }
+}
