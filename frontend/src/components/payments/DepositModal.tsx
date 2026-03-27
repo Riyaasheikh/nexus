@@ -43,7 +43,7 @@ const DepositForm: React.FC<DepositFormProps> = ({ onSuccess, onClose }) => {
     try {
       // Step 1: Ask backend to create a Stripe PaymentIntent
       const { data } = await axios.post(
-        `${API_BASE}/api/payments/create-intent`,
+        `${API_BASE}/payments/create-intent`,
         { amount },
         { headers: authHeaders() }  // ✅ correct token key
       );
