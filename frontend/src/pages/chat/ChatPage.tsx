@@ -22,7 +22,8 @@ import type { Message } from '../../types';
 import { getConversationsForUser } from '../../data/messages';
 
 // 🟢 Connect to your Node.js Signaling Server
-const socket = io('http://localhost:5000');
+const SIGNALING_URL = import.meta.env.VITE_SIGNALING_SERVER_URL || 'http://localhost:5000';
+const socket = io(SIGNALING_URL);
 
 export const ChatPage: React.FC = () => {
   const { userId } = useParams<{ userId: string }>();
