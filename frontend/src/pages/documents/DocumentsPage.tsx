@@ -164,7 +164,7 @@ export const DocumentsPage: React.FC = () => {
 
       try {
         await axios.post(
-          `${API_BASE}/api/documents/${activeDocId}/sign`,
+          `${API_BASE}/documents/${activeDocId}/sign`,
           { signature: signatureImage },
           { headers: authHeaders() }
         );

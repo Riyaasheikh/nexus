@@ -34,7 +34,7 @@ export const TwoFactorModal: React.FC<TwoFactorModalProps> = ({
     setSuccess(null);
 
     try {
-      const res = await axios.post(`${API_BASE}/api/auth/send-otp`, { email });
+      const res = await axios.post(`${API_BASE}/auth/send-otp`, { email });
 
       // Mock mode: backend returns the OTP so we can display it for testing
       if (res.data.otp) {
